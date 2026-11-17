@@ -1,0 +1,7 @@
+name: ea-ar
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - snakemake
+prefix: /home/maaal/miniconda3/envs/ea-ar
