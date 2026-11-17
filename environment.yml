@@ -1,7 +1,8 @@
-name: ea-ar
+name: grupoEA-AR-snakemake
 channels:
-  - defaults
+  - conda-forge
+  - bioconda
 dependencies:
   - python=3.12
-  - snakemake
-prefix: /home/maaal/miniconda3/envs/ea-ar
+  - snakemake>=9
+  - graphviz

@@ -1,1 +1,11 @@
-name: 
+# Datos crudos: no se suben a Github nunca
+data/raw/
+# Salidas generadas por el flujo de trabajo
+results/
+logs/
+benchmarks/
+# Entornos
+.snakemake/
+.venv/
+# Python
+__pycache__/
