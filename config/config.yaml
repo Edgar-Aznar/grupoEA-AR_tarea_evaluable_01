@@ -1,0 +1,26 @@
+data:
+  counts: "data/raw/counts.csv.gz"
+  metadata: "data/raw/metadata.csv.gz"
+
+design:
+  condition_column: "site"
+  test: "Primary_Solid_Tumor"
+  reference: "Solid_Tissue_Normal"
+  covariates: ["plate"]
+
+filter:
+  min_count: 10          # >= min_count lecturas en >= (tamano del grupo pequeno) muestras
+
+deseq2:
+  alpha: 0.05
+  lfc_threshold: 1
+
+subsampling:
+  sizes: [3, 5, 10, 20]     # muestras POR GRUPO
+  seeds: [1, 2, 3, 4, 5]
+
+enrichment:
+  libraries:                   # nombre corto -> libreria de Enrichr
+    go_bp: "GO_Biological_Process_2023"
+    reactome: "Reactome_2022"
+  subsets: ["full", "n3_s1"]   # sobre que analisis se hace el enriquecimiento
